@@ -1,1 +1,101 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idaeyus / Checklist</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: 'Fira Code', monospace;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .product {
+            margin-bottom: 20px;
+        }
+
+        .product h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+            pointer-events: none;
+            width: 16px;
+            height: 16px;
+            appearance: none;
+            border: 2px solid white;
+            background-color: black;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        input[type="checkbox"]:checked {
+            background-color: white;
+        }
+
+        input[type="checkbox"]:checked::after {
+            content: "✔";
+            color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Checklist</h1>
+        
+        <div class="product" id="product-1">
+            <h2>Nume</h2>
+            <ul>
+                <li><input type="checkbox" checked disabled> Gemini API integration</li>
+                <li><input type="checkbox" disabled> Groq integration</li>
+            </ul>
+        </div>
+
+        <div class="product" id="product-2">
+            <h2>KinoCR</h2>
+            <ul>
+                <li><input type="checkbox" checked disabled> Auto-zoom</li>
+                <li><input type="checkbox" disabled> Audio support</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
